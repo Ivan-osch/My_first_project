@@ -17,8 +17,9 @@ class LoginPageLocators():
 
 
 class ProductPageLocators():
-    ADD_TO_CART = (By.CSS_SELECTOR, ".btn-add-to-basket")
-    PRODUCT_IN_CART = (By.CSS_SELECTOR, "#messages .in:nth-child(1) .alertinner strong")
-    VALUE_IN_CART = (By.CSS_SELECTOR, "#messages .in:nth-child(3) .alertinner strong")
-    PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")
-    PRODUCT_VALUE = (By.CSS_SELECTOR, ".product_main .price_color")
+    ADD_TO_CART = (By.CSS_SELECTOR, ".btn-add-to-basket")  # кнопка добавить товар в корзину
+    PRODUCT_IN_CART = (By.CSS_SELECTOR, "#messages .in:nth-child(1) .alertinner strong")  # имя продукта в корзине
+    VALUE_IN_CART = (By.CSS_SELECTOR, "#messages .in:nth-child(3) .alertinner strong")  # цена продукта в корзине
+    PRODUCT_NAME = (By.CSS_SELECTOR, ".product_main h1")  # имя продукта на странице
+    PRODUCT_VALUE = (By.CSS_SELECTOR, ".product_main .price_color")  # цена продукта на странице
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages .in:nth-child(1) .alertinner")  # сообщение об успешном добавлении товара в корзину

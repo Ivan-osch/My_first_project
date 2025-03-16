@@ -19,3 +19,12 @@ class ProductPage(BasePage):
     def value_in_cart(self, product_value):
         product_value_in_cart = self.browser.find_element(*ProductPageLocators.VALUE_IN_CART).text
         assert product_value_in_cart == product_value, "The cart price does not match"
+
+    def should_not_be_success_message_not_element_present(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be. Method is_not_element_present"
+
+    def should_not_be_success_message_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be. Method is_disappeared"
+

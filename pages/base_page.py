@@ -23,6 +23,10 @@ class BasePage():
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
+    def go_to_basket_page_header(self):
+        link = self.browser.find_element(*BasePageLocators.BASKET_HEADER)
+        link.click()
+
     def is_disappeared(self, how, what, timeout=4):
         try:
             WebDriverWait(self.browser, timeout, 1, TimeoutException).\

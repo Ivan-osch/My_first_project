@@ -16,6 +16,7 @@ class BasePage():
         self.url = url
         self.browser.implicitly_wait(timeout)
 
+
     def go_to_basket_page_header(self):
         link = self.browser.find_element(*BasePageLocators.BASKET_HEADER)
         link.click()
